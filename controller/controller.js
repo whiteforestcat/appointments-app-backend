@@ -30,14 +30,22 @@ const login = async (req, res) => {
       username: specialUser.username,
     };
 
-    const access = jwt.sign(payload, process.env.ACCESS_SECRET, {
-      expiresIn: "20m",
-      jwtid: uuidv4(),
-    });
-    const refresh = jwt.sign(payload, process.env.REFRESH_SECRET, {
-      expiresIn: "30D",
-      jwtid: uuidv4(),
-    });
+    const access = jwt.sign(
+      payload,
+      `WuFQl5vzWZJgSY1WcwCZcKlK2oacWdLRamBt11h0V4bZ6kbQh6cl4WjncmWgv0YDGst0rzXWhfhtllf9P4WXN3TREeza8AalfZac`,
+      {
+        expiresIn: "20m",
+        jwtid: uuidv4(),
+      }
+    );
+    const refresh = jwt.sign(
+      payload,
+      `WuFQl5vzWZJgSY1WcwCZcKlK2oacWdLRamBt11h0V4bZ6kbQh6cl4WjncmWgv0YDGst0rzXWhfhtllf9P4WXN3TREeza8AalfZac`,
+      {
+        expiresIn: "30D",
+        jwtid: uuidv4(),
+      }
+    );
     const response = { access, refresh };
 
     res.json(response);
