@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-connectDB(`mongodb://127.0.0.1:27017/somedb`);
+connectDB(process.env.MONGODB_URI);
 
 app.use("/api", user);
 
