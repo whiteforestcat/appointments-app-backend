@@ -139,5 +139,4 @@ module.exports = {
   updateInfo,
   deleteInfo,
   searchByDate,
-  deploy
 };

@@ -10,7 +10,7 @@ router.post("/search", controllers.searchInfo)
 router.patch("/update", controllers.updateInfo)
 router.delete("/delete", controllers.deleteInfo)
 router.post("/searchbydate", controllers.searchByDate)
-router.get("/deploy", controllers.deploy)
+// router.get("/deploy", controllers.deploy)
 
 
 module.exports = router;
