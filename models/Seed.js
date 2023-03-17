@@ -1,0 +1,48 @@
+let seedData = [
+  {
+    name: "Amir",
+    hash: "example",
+    title: "Dentist",
+    with: "Dr Leon",
+    location: "Tanjong Pagar",
+    date: "2023-01-02",
+    start: "9:30",
+    end: "10:00",
+    category: "dental",
+  },
+  {
+    name: "Tom",
+    hash: "example",
+    title: "Medical Check Up",
+    with: "Dr Sam",
+    location: "Raffles Hospital",
+    date: "2023-01-05",
+    start: "12:30",
+    end: "15:00",
+    category: "medical",
+  },
+  {
+    name: "Amir",
+    hash: "example",
+    title: "Medical Check Up",
+    with: "Dr Peter",
+    location: "Raffles Hospital",
+    date: "2023-01-08",
+    start: "12:30",
+    end: "15:00",
+    category: "medical",
+  },
+  {
+    name: "Tom",
+    hash: "example",
+    title: "Medical Check Up",
+    with: "Dr Mervin",
+    location: "Raffles Hospital",
+    date: "2023-01-11",
+    start: "12:30",
+    end: "15:00",
+    category: "medical",
+  },
+];
+
+module.exports = seedData;
