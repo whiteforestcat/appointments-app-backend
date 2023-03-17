@@ -1,10 +1,17 @@
-const express = require("express");
+require("dotenv").config();
 
+const express = require("express");
+const cors = require("cors");
+const connectDB = require("./db/db");
+const user = require("./router/router");
 
 const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-const PORT = process.env.PORT || 5000;
+connectDB(process.env.MONGODB_URI);
 
+app.use("/api", user);
 
-app.listen(PORT, () => console.log("Server is running in port", PORT));
-
+app.listen(5000);
