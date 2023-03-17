@@ -4,6 +4,17 @@ const jwt = require("jsonwebtoken");
 const { v4: uuidv4 } = require("uuid");
 const seedData = require("../models/Seed");
 
+// DEPLOY MESSAGE
+const deploy = async (req, res) => {
+  try {
+    res.json("server connected")
+  } catch (error) {
+    console.log(error.message)
+    return res.json("server error")
+  }
+}
+
+
 // LOGIN
 const login = async (req, res) => {
   try {
